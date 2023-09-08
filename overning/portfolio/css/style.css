@@ -1,0 +1,56 @@
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 330px;
+    width: 220px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+
+    
+    
+}
+.text{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 0.8em sans-serif; 
+    margin-bottom: auto;
+    margin: 0 20px;
+}
+.qoute{
+    display: flex;
+    text-align: center;
+    font: 0.7em sans-serif; 
+    color: lightgray;
+    padding:10px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    
+    
+}
+.dots {
+    color: green;
+   
+    
+}
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+
