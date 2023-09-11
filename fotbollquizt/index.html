@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Football Quiz - Round 1</h1>
+
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Who holds the record for the most goals scored in a single calendar year?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="b"> Lionel Messi</label>
+                <label><input type="radio" name="q1" value="a"> Cristiano Ronaldo</label>
+                <label><input type="radio" name="q1" value="c"> Neymar</label>
+                <label><input type="radio" name="q1" value="d"> Robert Lewandowski</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. What is the capital of France?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> Paris</label>
+                <label><input type="radio" name="q2" value="b"> Rome</label>
+                <label><input type="radio" name="q2" value="c"> Madrid</label>
+                <label><input type="radio" name="q2" value="d"> Berlin</label>
+            </div>
+        </div>
+        <!-- Add more questions and options following the same format -->
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Define correct answers for round 1
+            const correctAnswersRound1 = {
+                q1: 'b', // Question 1
+                // Add correct answers for other questions
+            };
+
+            let score = 0;
+
+            // Iterate through questions
+            for (let i = 1; i <= Object.keys(correctAnswersRound1).length; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswersRound1[`q${i}`]) {
+                        score++;
+                        selectedAnswer.parentElement.classList.add('correct');
+                    } else {
+                        selectedAnswer.parentElement.classList.add('incorrect');
+                    }
+                }
+            }
+
+            alert(`You scored ${score} out of ${Object.keys(correctAnswersRound1).length}`);
+
+            // If user passes round 1 (adjust as needed)
+            if (score >= 3) {
+                document.getElementById('quizForm').reset();
+                document.querySelector('h1').textContent = 'Football Quiz - Round 2';
+
+                // Change the form action, question IDs, and correct answers for round 2
+                document.getElementById('quizForm').action = '#round2';
+                document.querySelector('p').textContent = '51. Sample Question for Round 2';
+                document.querySelector('label[for="q1a"]').textContent = 'Option A for Round 2';
+                document.querySelector('label[for="q1b"]').textContent = 'Option B for Round 2';
+                document.querySelector('label[for="q1c"]').textContent = 'Option C for Round 2';
+                document.querySelector('label[for="q1d"]').textContent = 'Option D for Round 2';
+
+                // Add correct answers for round 2
+                const correctAnswersRound2 = {
+                    q1: 'a', // Question 1
+                    // Add correct answers for other questions
+                };
+
+                document.getElementById('quizForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    let score = 0;
+
+                    for (let i = 1; i <= Object.keys(correctAnswersRound2).length; i++) {
+                        const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+
+                        if (selectedAnswer) {
+                            if (selectedAnswer.value === correctAnswersRound2[`q${i}`]) {
+                                score++;
+                                selectedAnswer.parentElement.classList.add('correct');
+                            } else {
+                                selectedAnswer.parentElement.classList.add('incorrect');
+                            }
+                        }
+                    }
+
+                    alert(`You scored ${score} out of ${Object.keys(correctAnswersRound2).length}`);
+                });
+            }
+        });
+        const correctAnswersRound1 = {
+    q1: 'b', // Question 1
+    q2: 'a', // Question 2
+    // Add correct answers for other questions
+};
+
+    </script>
+</body>
+</html>
