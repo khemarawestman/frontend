@@ -1,0 +1,156 @@
+body{
+    height: 100vh;
+    width: 100vw;
+   display: flex;
+    gap:5rem;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap
+}
+.dice {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.dice aside {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.two{
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 11px;
+}
+.dice1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+.dot-1{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.dice3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+ .dice3 aside{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.dot-3{
+    grid-column: 2;
+    grid-row: 2;
+    
+}
+.dot-4{
+    grid-column: 3;
+    grid-row: 3;
+}
+.dice4{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+.dice4 aside{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.dot-7{
+    grid-row: 3;
+}
+.dot-6{
+    grid-column: 3;
+}
+.dot-8{
+    grid-row:3;
+    grid-column: 3;
+}
+.dice5{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+.dice5 aside{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.dot-13{
+    grid-column: 3;
+    grid-row: 3;
+}
+.dot-11{
+    grid-row: 3;
+}
+.dot-10{
+    grid-column: 2;
+    grid-row:2;
+}
+.dot-12{
+    grid-column: 3;
+}
+.dice6{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.dice6 aside{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    
+}
