@@ -1,6 +1,10 @@
 /* header  */
 .container {
-  background-color: #22162b;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +39,18 @@ h1 {
 /* header ended */
 /* gallery start */
 .container1 {
-  background-color: #451f55;
+  background: rgb(9, 13, 33);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 13, 33, 1) 0%,
+    rgba(116, 96, 130, 1) 16%,
+    rgba(168, 19, 204, 1) 28%,
+    rgba(50, 37, 60, 1) 43%,
+    rgba(77, 94, 180, 1) 62%,
+    rgba(25, 32, 68, 1) 78%,
+    rgba(25, 22, 43, 1) 92%,
+    rgba(128, 34, 53, 1) 100%
+  );
   padding: 40px 0;
 }
 .container1 .gallerie {
@@ -44,8 +59,16 @@ h1 {
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   color: white;
+  text-align: center;
 }
-
+.container1 .gallerie > div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* Add some padding for spacing */
+}
 .container1 .gallerie .item img {
   max-width: 100%; /* Make images responsive */
   height: auto;
@@ -63,9 +86,7 @@ h1 {
   max-width: 100%; /* Make images responsive */
   height: auto;
 }
-.container1 .gallerie > div {
-  text-align: left;
-}
+
 .container1 .bigpic > div {
   text-align: left;
 }
@@ -108,7 +129,7 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   background-color: #724e91;
-  color: aliceblue;
+  color: #eceeefa2;
 }
 
 .Nav {
@@ -135,7 +156,16 @@ button:hover {
   text-decoration: none;
 }
 body {
-  background-color: #e54f6d;
+  background: rgb(116, 96, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(116, 96, 130, 1) 16%,
+    rgba(103, 91, 112, 1) 28%,
+    rgba(50, 37, 60, 1) 42%,
+    rgba(77, 94, 180, 1) 62%,
+    rgba(9, 13, 33, 1) 83%,
+    rgba(128, 34, 53, 1) 100%
+  );
 }
 
 button {
@@ -184,4 +214,108 @@ button:hover:after {
     padding: 0.75rem 3rem;
     font-size: 1.25rem;
   }
+}
+.linkedin:hover {
+  background-color: #007bb6;
+}
+.facebook:hover {
+  background-color: #3b5998;
+}
+.twitter:hover {
+  background-color: #00aced;
+}
+.insta:hover {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
