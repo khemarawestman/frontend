@@ -64,10 +64,10 @@ h1 {
   height: auto;
 }
 .container1 .gallerie > div {
-  text-align: center;
+  text-align: left;
 }
 .container1 .bigpic > div {
-  text-align: center;
+  text-align: left;
 }
 .container1 .gallerie .item img {
   height: 400px;
@@ -124,13 +124,7 @@ footer {
 .social .media img {
   margin-left: 10px;
 }
-button {
-  justify-content: center;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: #e54f6d;
-  color: white;
-}
+
 button:hover {
   background: #2079b0;
   background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
@@ -142,4 +136,52 @@ button:hover {
 }
 body {
   background-color: #e54f6d;
+}
+
+button {
+  background-color: #3dd1e7;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #e54f6d;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
 }
