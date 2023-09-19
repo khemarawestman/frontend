@@ -1,51 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <nav class="navbar">
-  <ul>
-    <li ><a href="#">Home</a></li>
-    <li> <a href="#">About Me</a></li>
-    <li> <a href="#">Portfolio </a></li>
-    <li> <a href="#">Services </a></li>
-    <li> <a href="#">Contact Me</a></li>
-  </ul>
-</nav>
-<section id ="home">
-  <div class="main">
-    <h1 class="heading">I AM KHEMARA WESTMAN <br> 
-         WEB DEVELOPER 
-        & PHOTOGRAPHER.</h1>
-    <button class="btn">HIRE ME</button>
-  </div>
-</section>
-<section id="about">
-  <h1 class="headings">ABOUT ME</h1>
-  <div id="pic">
-    <img src="logo/logo1.jpg" alt="">
-    <div id="intro">
-      <h2>KHEMARA WESTMAN</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident blanditiis, pariatur cumque expedita impedit, atque vitae amet recusandae unde illo eius harum vero hic cum magni est animi earum quisquam.</p>
-    </div>
-  </div>
-</section>
-<section id="Portfolio">
-    <h1 class="headings">PORTFOLIO</h1>
-    <div class="gallery">
-        
-    <img src="logo/img.jpg" alt="">
-    <img src="logo/img1.jpg" alt="">
-    <img src="logo/img2.jpg" alt="">
-    <img src="logo/im3.jpg" alt="">
-    <img src="logo/img4.jpg" alt="">
-    <img src="logo/img5.jpg" alt="">
-</div>
-</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and(max-width:800px)"
+      href="css/Tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:530px)"
+      href="css/phone.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#Portfolio">Portfolio </a></li>
+        <li><a href="#services">Services </a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <div class="main">
+        <h1 class="heading">
+          I AM KHEMARA WESTMAN <br />
+          WEB DEVELOPER & PHOTOGRAPHER.
+        </h1>
+        <button class="btn">HIRE ME</button>
+      </div>
+    </section>
+    <section id="about">
+      <h1 class="headings">ABOUT ME</h1>
+      <div id="pic">
+        <img src="logo/logo1.jpg" alt="" />
+        <div id="intro">
+          <h2>KHEMARA WESTMAN</h2>
+          <p>
+            Hello! I'm Khemara Westman, a passionate frontend developer with a
+            keen interest in UX/UI design. As I navigate the digital landscape,
+            I'm committed to crafting seamless user experiences that leave a
+            lasting impression. Beyond the world of code, my lens finds solace
+            in photography. Capturing moments that tell stories is not just a
+            hobby, but a way of seeing the world through a unique perspective.
+            The interplay of light, composition, and emotion fuels my creative
+            spirit. With an unquenchable thirst for knowledge, I'm on a
+            continuous journey to expand my skills and embrace the evolving
+            realms of web development and design. Let's collaborate and bring
+            visions to life.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="Portfolio">
+      <h1 class="headings">PORTFOLIO</h1>
+      <div class="gallery">
+        <img src="logo/img.jpg" alt="" />
+        <img src="logo/img1.jpg" alt="" />
+        <img src="logo/img2.jpg" alt="" />
+        <img src="logo/im3.jpg" alt="" />
+        <img src="logo/img4.jpg" alt="" />
+        <img src="logo/img5.jpg" alt="" />
+      </div>
+    </section>
 
-</body>
+    <section id="services">
+      <h1 class="headings">SERVIES</h1>
+      <div class="row">
+        <div class="box">
+          <img src="logo/web-design.png" alt="" />
+          <h1 class="headings">Website Design</h1>
+          <p>
+            Greetings! Welcome to my Website Design Portfolio. I am passionate
+            about creating visually appealing, user-friendly, and responsive
+            websites that leave a lasting impression. Below, you will find a
+            selection of projects that showcase my skills and expertise in
+            website design.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="logo/design.png" alt="" />
+          <h1 class="headings">UX/UI <br />Design</h1>
+          <p>
+            I am dedicated to creating intuitive and visually appealing user
+            experiences. Below are some of my projects that showcase my
+            expertise in UX/UI design.
+          </p>
+        </div>
+        <div class="box">
+          <img src="logo/photo-strip.png" alt="" />
+          <h1 class="headings">photography</h1>
+          <p>
+            Through my lens, I capture moments that tell stories, evoke
+            emotions, and celebrate the beauty of the world around us. Below,
+            you'll find a selection of my work that showcases my passion for
+            photography.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h1 class="headings">CONTACT</h1>
+      <form action="" class="form">
+        <input
+          type="text"
+          name="name"
+          class="input"
+          placeholder="Enter Your Name"
+        />
+        <input
+          type="email"
+          name="Email"
+          class="input"
+          placeholder="Enter Your Email"
+        />
+        <textarea
+          name="msg"
+          id="msg"
+          cols="30"
+          rows="10"
+          placeholder="Enter Your Message"
+        ></textarea>
+        <input type="submit" value="SEND" id="send" />
+      </form>
+    </section>
+  </body>
 </html>
