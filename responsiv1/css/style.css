@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+.one {
+  grid-column-start: 1;
+  background-color: yellowgreen;
+  height: 100px;
+  width: 320px;
+}
+.tow {
+  grid-column: 2;
+  background-color: yellowgreen;
+  height: 100px;
+  width: 320px;
+}
+.three {
+  grid-column: 3;
+  background-color: yellowgreen;
+  height: 100px;
+  width: 320px;
+}
+.four {
+  grid-column: 4;
+  background-color: yellowgreen;
+  height: 100px;
+  width: 320px;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.five {
+  background-color: yellowgreen;
+  height: 400px;
+  width: 420px;
+  margin: 10px;
+}
+.six {
+  background-color: yellowgreen;
+  height: 400px;
+  width: 420px;
+  margin: 10px;
+}
+.seven {
+  background-color: yellowgreen;
+  height: 400px;
+  width: 420px;
+  margin: 10px;
+}
+.eight {
+  background-color: yellowgreen;
+  height: 100px;
+  width: 1325px;
+  margin: 10px;
+}
