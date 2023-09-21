@@ -30,3 +30,7 @@
 #send {
   width: 20%;
 }
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
