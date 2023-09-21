@@ -1,0 +1,33 @@
+.calender {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  grid-template-rows: repeat(19, 50px);
+}
+.month {
+  grid-column: auto/span 7;
+  align-items: center;
+  border: 1px solid black;
+  background-color: red;
+  color: white;
+}
+.weekday {
+  grid-column: auto/span 1;
+  background-color: lightgrey;
+}
+div {
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+.red {
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+}
+.grey {
+  color: lightgray;
+}
+.background {
+  background-color: rgb(206, 206, 206);
+}
