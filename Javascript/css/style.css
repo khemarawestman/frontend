@@ -1,0 +1,11 @@
+.blue {
+  color: blue;
+}
+
+.h1{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.spa{
+    grid-column: auto/span 2;
+}

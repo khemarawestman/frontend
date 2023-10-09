@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>VÄLKOMMEN</h1>
+    <button>KLICKa MIg</button>
+    <script>
+      console.log(document);
+
+      document.querySelector("button").addEventListener("click", () => {
+        console.log("du klickade på knappen ");
+        document.querySelector("h1").classList.toggle("blue");
+      });
+    </script
+  </body>
+</html>
