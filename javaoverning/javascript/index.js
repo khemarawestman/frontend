@@ -27,43 +27,105 @@ if (pass === "large" || pass === "platinum") {
   console.log("Du får tyvärr inte åka Balder.");
 }*/
 
-// Funktion för att beräkna BMI
-function calculateBMI(weight, height) {
-  let heightInMeters = height / 100;
-  let bmi = weight / (heightInMeters * heightInMeters);
-  return bmi;
+/*let nummer = parseInt(prompt("Ange ett nummer (1-7):"));
+let veckodag;
+
+switch (nummer) {
+  case 1:
+    veckodag = "Måndag";
+    break;
+  case 2:
+    veckodag = "Tisdag";
+    break;
+  case 3:
+    veckodag = "Onsdag";
+    break;
+  case 4:
+    veckodag = "Torsdag";
+    break;
+  case 5:
+    veckodag = "Fredag";
+    break;
+  case 6:
+    veckodag = "Lördag";
+    break;
+  case 7:
+    veckodag = "Söndag";
+    break;
+  default:
+    veckodag = false;
 }
 
-// Funktion för att ge en klassificering baserat på BMI
-function classifyBMI(bmi) {
-  if (bmi < 18.5) {
-    return "Undervikt";
-  } else if (bmi <= 25) {
-    return "Normalvikt";
-  } else if (bmi <= 30) {
-    return "Övervikt";
-  } else {
-    return "Fetma";
+if (veckodag) {
+  console.log(`Nummer ${nummer} motsvarar ${veckodag}.`);
+} else {
+  console.log("False. Ange ett nummer mellan 1 och 7.");
+}*/
+
+/*let nummer = parseInt(prompt("Ange ett nummer (1-12):"));
+let månad;
+
+if (nummer >= 1 && nummer <= 12) {
+  switch (nummer) {
+    case 1:
+      månad = "Januari";
+      break;
+    case 2:
+      månad = "Februari";
+      break;
+    case 3:
+      månad = "Mars";
+      break;
+    case 4:
+      månad = "April";
+      break;
+    case 5:
+      månad = "Maj";
+      break;
+    case 6:
+      månad = "Juni";
+      break;
+    case 7:
+      månad = "Juli";
+      break;
+    case 8:
+      månad = "Augusti";
+      break;
+    case 9:
+      månad = "September";
+      break;
+    case 10:
+      månad = "Oktober";
+      break;
+    case 11:
+      månad = "November";
+      break;
+    case 12:
+      månad = "December";
+      break;
   }
 }
 
-// Fråga användaren om vikt och längd
-let weight = prompt("Ange din vikt i kg:");
-let height = prompt("Ange din längd i cm:");
-
-// Konvertera till nummer och beräkna BMI
-let weightNumber = parseFloat(weight);
-let heightNumber = parseFloat(height);
-
-// Kolla om inmatningen är numerisk
-if (!isNaN(weightNumber) && !isNaN(heightNumber)) {
-  let bmi = calculateBMI(weightNumber, heightNumber);
-  let classification = classifyBMI(bmi);
-
-  // Skriv ut klassificeringen
-  alert(
-    `Ditt BMI är ${bmi.toFixed(2)} och du klassificeras som ${classification}.`
-  );
+if (månad) {
+  console.log(`Nummer ${nummer} motsvarar månaden ${månad}.`);
 } else {
-  alert("Ogiltiga indata. Var vänlig ange numeriska värden.");
+  console.log("False. Ange ett nummer mellan 1 och 12.");
+}
+*/
+
+let weight = prompt("Skriv in din vikt");
+let length = prompt("Skriv in din längd");
+let bmi;
+bmi = weight / (length / 100) ** 2;
+
+if (bmi < 18.5) {
+  console.log("undervikt");
+} else if (bmi <= 25) {
+  console.log("du har normal vikt");
+} else if (bmi <= 30) {
+  console.log("du är överviktig");
+} else if (bmi > 30) {
+  console.log("Du lider av fetma! Gå till gymmet och bränn fett förfan!");
+} else {
+  console.log("Skriv in din vikt rätt!");
 }
