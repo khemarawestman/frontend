@@ -62,7 +62,7 @@ if (veckodag) {
   console.log("False. Ange ett nummer mellan 1 och 7.");
 }*/
 
-/*let nummer = parseInt(prompt("Ange ett nummer (1-12):"));
+let nummer = parseInt(prompt("Ange ett nummer (1-12):"));
 let månad;
 
 if (nummer >= 1 && nummer <= 12) {
@@ -111,9 +111,8 @@ if (månad) {
 } else {
   console.log("False. Ange ett nummer mellan 1 och 12.");
 }
-*/
 
-let weight = prompt("Skriv in din vikt");
+/*let weight = prompt("Skriv in din vikt");
 let length = prompt("Skriv in din längd");
 let bmi;
 bmi = weight / (length / 100) ** 2;
@@ -128,4 +127,4 @@ if (bmi < 18.5) {
   console.log("Du lider av fetma! Gå till gymmet och bränn fett förfan!");
 } else {
   console.log("Skriv in din vikt rätt!");
-}
+}*/
