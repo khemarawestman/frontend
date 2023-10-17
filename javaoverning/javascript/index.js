@@ -4,30 +4,30 @@ if (a < b) {
   console.log("det stämmer !");
 } else {
   console.log("det stämmer inte !");
-}*/
-/*let c = "apple";
+}
+let c = "apple";
 let e = "pear";
 
 if (c > e) {
   console.log("det stämmer!");
 } else {
   console.log("det stämmer inte !");
-}*/
-/*const number = prompt("Skriv in din ålder?");
-if (number % 2 === 0) {
+}
+const tal = prompt("Skriv in din ålder?");
+if (tal % 2 === 0) {
   console.log("det är jämt tal");
 } else {
   console.log("det är udda tal");
-}*/
-/*let pass = prompt("Vilket åkband har du (small, medium, large, platinum)?");
+}
+let pass = prompt("Vilket åkband har du (small, medium, large, platinum)?");
 
 if (pass === "large" || pass === "platinum") {
   console.log("Du får åka Balder!");
 } else {
   console.log("Du får tyvärr inte åka Balder.");
-}*/
+}
 
-/*let nummer = parseInt(prompt("Ange ett nummer (1-7):"));
+let nummer = parseInt(prompt("Ange ett nummer (1-7):"));
 let veckodag;
 
 switch (nummer) {
@@ -60,7 +60,7 @@ if (veckodag) {
   console.log(`Nummer ${nummer} motsvarar ${veckodag}.`);
 } else {
   console.log("False. Ange ett nummer mellan 1 och 7.");
-}*/
+}
 
 let nummer = parseInt(prompt("Ange ett nummer (1-12):"));
 let månad;
@@ -110,7 +110,7 @@ if (månad) {
   console.log(`Nummer ${nummer} motsvarar månaden ${månad}.`);
 } else {
   console.log("False. Ange ett nummer mellan 1 och 12.");
-}
+}*/
 
 /*let weight = prompt("Skriv in din vikt");
 let length = prompt("Skriv in din längd");
@@ -128,3 +128,71 @@ if (bmi < 18.5) {
 } else {
   console.log("Skriv in din vikt rätt!");
 }*/
+/*let pass = prompt("Vilket åkband har du (small, medium, large, platinum)?");
+
+if (pass === "large" || pass === "platinum") {
+  console.log("Du får åka Balder!");
+} else {
+  console.log("Du får tyvärr inte åka Balder.");
+}*/
+// Deklarera variabler för poängen
+let spelarePoäng = 0;
+let datornsPoäng = 0;
+
+// Funktion för att slumpa datorns drag
+function slumpaDatornsDrag() {
+  let slumpatTal = Math.floor(Math.random() * 3) + 1;
+
+  if (slumpatTal === 1) {
+    return "sten";
+  } else if (slumpatTal === 2) {
+    return "sax";
+  } else {
+    return "påse";
+  }
+}
+
+// Funktion för att spela en runda
+function spelaRunda(valtDrag) {
+  let datornsDrag = slumpaDatornsDrag();
+
+  if (valtDrag === datornsDrag) {
+    console.log("Oavgjort!");
+  } else if (
+    (valtDrag === "sten" && datornsDrag === "sax") ||
+    (valtDrag === "sax" && datornsDrag === "påse") ||
+    (valtDrag === "påse" && datornsDrag === "sten")
+  ) {
+    console.log("Du vinner!");
+    spelarePoäng++;
+  } else {
+    console.log("Datorn vinner!");
+    datornsPoäng++;
+  }
+}
+
+// Funktion för att visa poängen
+function visaPoäng() {
+  console.log("Din poäng: " + spelarePoäng);
+  console.log("Datorns poäng: " + datornsPoäng);
+}
+
+// Huvudprogram
+while (true) {
+  let valtDrag = prompt("Välj sten, sax eller påse");
+
+  if (valtDrag === "sten" || valtDrag === "sax" || valtDrag === "påse") {
+    spelaRunda(valtDrag);
+    visaPoäng();
+
+    let spelaIgen = prompt("Vill du spela igen? (ja/nej)");
+
+    if (spelaIgen.toLowerCase() !== "ja") {
+      break;
+    }
+  } else {
+    console.log("Ogiltigt val. Försök igen.");
+  }
+}
+
+console.log("Spelet avslutat. Tack för att du spelade!");
