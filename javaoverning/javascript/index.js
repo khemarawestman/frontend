@@ -136,6 +136,8 @@ if (pass === "large" || pass === "platinum") {
   console.log("Du får tyvärr inte åka Balder.");
 }*/
 // Deklarera variabler för poängen
+
+/*
 let spelarePoäng = 0;
 let datornsPoäng = 0;
 
@@ -195,4 +197,4 @@ while (true) {
   }
 }
 
-console.log("Spelet avslutat. Tack för att du spelade!");
+console.log("Spelet avslutat. Tack för att du spelade!");*/
