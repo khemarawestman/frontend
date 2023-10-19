@@ -1,0 +1,25 @@
+#story {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+p {
+  color: #fafffd;
+  width: 50%;
+}
+button {
+  color: #fafffd;
+  background-color: #b19994;
+  width: 15%;
+  height: 2rem;
+}
+body {
+  background-image: url("../background.jpg");
+  background-size: cover;
+}
