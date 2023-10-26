@@ -18,7 +18,7 @@ function displayTasks() {
 
     // Add a delete button to each task
     const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
+    //deleteButton.textContent = "Delete";
     deleteButton.addEventListener("click", () => {
       tasks.splice(index, 1);
       displayTasks();

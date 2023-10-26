@@ -10,8 +10,29 @@
 
 //const marge = [a, b];
 //console.log(marge);
-let fruits = ["kiwi", "apple", "pear"];
+/*let fruits = ["kiwi", "apple", "pear"];
 fruits.push("banana");
 fruits.unshift("hallon");
-fruits.pop("kiwi");
-console.log(fruits);
+fruits.slice(0, 1);
+fruits.splice(0, 2, "mango", "päron", "tomat");
+console.log(fruits);*/
+/*let names = ["David", "Christoffer", "Johan", "Maja"];
+names.splice(1, 2);
+console.log(names);
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+nums.reverse();
+console.log(nums);*/
+/*let str = "Supercalifragilisticexpialidocious";
+let n = str.includes("n");
+console.log(n);
+let x = str.includes("x");
+console.log(x);
+let index = str.indexOf("p");
+console.log(index);
+let firth = str.substring(0, 5);
+console.log(firth);
+let sevenLetter = str.substring(27, 34);
+console.log(sevenLetter);*/
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
