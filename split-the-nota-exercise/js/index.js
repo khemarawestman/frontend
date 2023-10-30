@@ -3,9 +3,9 @@ const inputFormElem = document.querySelector("#inputForm");
 const friendSumElem = document.querySelector("#friendSum");
 const calculateButton = document.querySelector("#calculateButton");
 
-function calculateTip(sum, tip) {
+/*function calculateTip(sum, tip) {
   return calculateTip;
-}
+}*/
 
 function divideTotal(total, numberOfFriends) {
   const sumDivided = total / parseInt(numberOfFriends);

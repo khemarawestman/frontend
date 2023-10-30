@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*//Variables to use and it's a mix of global and local variables
 let shoppingCart = [];
 let products = document.getElementsByTagName("button");
@@ -11,15 +12,49 @@ document.querySelector("#open-cart").addEventListener("click", () => {
     '<li><span class="product-title">Titel: </span>' +
     shoppingCart[i] +
     "</li>";
+=======
+let shoppingCart = [];
+
+let products = document.getElementsByTagName("button");
+
+document.querySelector("#open-cart").addEventListener("click", () => {
+  document.querySelector("#cart").classList.toggle("hide");
+>>>>>>> 060f372e71c8cae035347f11804f06e91b2ba562
 });
 
 //Function declarations, add code inside {}
 function updateCart() {
   document.querySelector("#productsInCart").innerHTML = shoppingCart.length;
 }
+<<<<<<< HEAD
 
 function listProductsInCart() {
   for (let i = 0; i < shoppingCart.length; i++) {}
+=======
+function listProductsInCart() {
+  let cartProducts = "";
+  for (let i = 0; i < shoppingCart.length; i++) {
+    cartProducts +=
+      '<li><span class="product-title">Titel: </span>' +
+      shoppingCart[i] +
+      ' <button class="delete-button" data-index="' +
+      i +
+      //add delete button
+      '">Delete</button></li>';
+  }
+  document.querySelector("#products").innerHTML = cartProducts;
+
+  // Add event listener for delete buttons
+  let deleteButtons = document.querySelectorAll(".delete-button");
+  deleteButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      let index = event.target.getAttribute("data-index");
+      shoppingCart.splice(index, 1);
+      listProductsInCart();
+      updateCart();
+    });
+  });
+>>>>>>> 060f372e71c8cae035347f11804f06e91b2ba562
 }
 
 //For-loops of two arrays
@@ -29,6 +64,7 @@ for (let i = 0; i < products.length; i++) {
     console.log(event.target);
     let product = event.target.parentNode.getAttribute("data-product");
     shoppingCart.push(product);
+<<<<<<< HEAD
     document.querySelector("#cart").classList.toggle("hide");
 
     updateCart();
@@ -79,3 +115,10 @@ document.querySelector("#open-cart").addEventListener("click", () => {
 
 // Function calls
 updateCart(); // Update cart count initially
+=======
+    listProductsInCart();
+    updateCart();
+    // event here is the HTML element that was clicked on
+  });
+}
+>>>>>>> 060f372e71c8cae035347f11804f06e91b2ba562
