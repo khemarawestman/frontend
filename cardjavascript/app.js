@@ -5,20 +5,19 @@ function generateDeck() {
 
   let deck = [];
 
-  for (let i = 0; i < suits.length; i++) {
-    for (let j = 0; j < ranks.length; j++) {
-      let suit = suits[i];
-      let rank = ranks[j];
+  for (let suit of suits) {
+    for (let rank of ranks) {
       let name;
-
-      if (rank === 11) {
-        name = "J";
-      } else if (rank === 12) {
-        name = "D";
-      } else if (rank === 13) {
-        name = "K";
-      } else if (rank === 14) {
-        name = "A";
+      if (rank >= 11) {
+        if (rank === 11) {
+          name = "J";
+        } else if (rank === 12) {
+          name = "D";
+        } else if (rank === 13) {
+          name = "K";
+        } else {
+          name = "A";
+        }
       } else {
         name = rank.toString();
       }
@@ -46,6 +45,7 @@ function shuffle(deck) {
   return shuffledDeck;
 }
 
+// Funktion för att visa korten i bodyn
 function displayCards(cards) {
   const container = document.getElementById("card-container");
 
@@ -54,27 +54,21 @@ function displayCards(cards) {
     article.classList.add("card");
 
     const top = document.createElement("aside");
-    top.classList.add("top", getSuitColorClass(card.suit));
+    top.classList.add("top");
+    top.innerHTML = card.suit;
 
     const h1 = document.createElement("h1");
     h1.textContent = card.name;
 
     const bottom = document.createElement("aside");
-    bottom.classList.add("bottom", getSuitColorClass(card.suit));
+    bottom.classList.add("bottom");
+    bottom.innerHTML = card.suit;
 
     article.appendChild(top);
     article.appendChild(h1);
     article.appendChild(bottom);
 
     container.appendChild(article);
-  }
-}
-
-function getSuitColorClass(suit) {
-  if (suit === "&hearts;" || suit === "&diams;") {
-    return "red";
-  } else {
-    return "black";
   }
 }
 
