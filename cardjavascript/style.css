@@ -24,20 +24,3 @@
   height: 100vh;
   flex-wrap: wrap;
 }
-.card .top,
-.card .bottom {
-  font-size: 24px;
-}
-
-.card .top::before,
-.card .bottom::before {
-  font-size: 40px;
-}
-
-.card .red {
-  color: red;
-}
-
-.card .black {
-  color: black;
-}

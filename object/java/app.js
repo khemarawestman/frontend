@@ -1,10 +1,9 @@
 let button = document.querySelector("button");
 let insultDisplay = document.querySelector("#insult-display");
 let playDisplay = document.querySelector("#play");
-
-function removeRandom(insults, index) {
+let allinsults = function removeRandom(insults, index) {
   insults.splice(index, 1);
-}
+};
 
 button.addEventListener("click", function () {
   let generateNumber = Math.floor(Math.random() * insults.length);

@@ -1,5 +1,5 @@
 /*function filterButtons() {
-  const countries = Array.z (new Set(users.map((user) => user.nat)));
+  const countries = Array.z(new Set(users.map((user) => user.nat)));
   const filterButtons = document.getElementById("filter-buttons");
 
   countries.forEach((country) => {
@@ -26,9 +26,7 @@ function displayFilteredUsers(filteredUsers) {
     filteredUsersContainer.appendChild(userDiv);
   });
 }
-filterButtons()
-;
-*/
+filterButtons();
 /*const females = users.filter((user) =>
   user.name.title.toLowerCase().includes("miss")
 );
@@ -41,8 +39,8 @@ console.log("Mr:", males);*/
 /*function extractEmails(users) {
   return users.map((user) => user.email);
 }
-console.log(extractEmails, users);*/
-/*function changeEmailsToEvilCorp(users) {
+console.log(extractEmails, users);
+function changeEmailsToEvilCorp(users) {
   for (let user of users) {
     const firstName = user.name.first;
     const lastName = user.name.last;
