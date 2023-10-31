@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 600" enable-background="new 0 0 400 600" xml:space="preserve">
+<g id="clipping">
+	<defs>
+		<rect id="SVGID_1_" width="400" height="600"/>
+	</defs>
+	<use xlink:href="#SVGID_1_"  overflow="visible" fill="#FAE678"/>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g id="base" opacity="0.2" clip-path="url(#SVGID_2_)">
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="200" cy="93.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="200" cy="504.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="-5" cy="299" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="-5" cy="93.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="-5" cy="504.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="405" cy="299" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="405" cy="93.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="405" cy="504.5" r="102.5"/>
+		<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M199.5,401.5c0,0.2,0,0.3,0,0.5v0
+			c0,56.4-45.6,102.2-102,102.5c-0.2,0-0.3,0-0.5,0C40.4,504.5-5.5,458.6-5.5,402v0c0-0.2,0-0.3,0-0.5c0.3-56.4,46.1-102,102.5-102
+			c0.2,0,0.3,0,0.5,0c0,0,0,0,0,0"/>
+		<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M199.5,196.5L199.5,196.5c0-0.2,0-0.3,0-0.5
+			c-0.3-56.2-45.8-101.7-102-102c0,0,0,0,0,0c-0.2,0-0.3,0-0.5,0C40.6,94-5.2,139.6-5.5,196c0,0.2,0,0.3,0,0.5v0
+			C-5.5,253.1,40.4,299,97,299c0.2,0,0.3,0,0.5,0"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="97" cy="607.5" r="102.5"/>
+		<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M199.5,401.5c0,0.2,0,0.3,0,0.5v0
+			c0,56.6,45.9,102.5,102.5,102.5c0.2,0,0.3,0,0.5,0c56.4-0.3,102-46,102-102.5v0c0-0.2,0-0.3,0-0.5c-0.3-56.2-45.8-101.7-102-102
+			c0,0,0,0,0,0"/>
+		<path fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" d="M302.5,299c56.4-0.3,102-46,102-102.5v0
+			c0-0.2,0-0.3,0-0.5c-0.3-56.2-45.8-101.7-102-102c0,0,0,0,0,0c-0.2,0-0.3,0-0.5,0c-56.4,0-102.2,45.6-102.5,102c0,0.2,0,0.3,0,0.5
+			v0"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="97.5" cy="-8.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="302.5" cy="-8.5" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="200" cy="299" r="102.5"/>
+		<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="302" cy="607.5" r="102.5"/>
+	</g>
+	<g id="rose" opacity="0.2" clip-path="url(#SVGID_2_)">
+		
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -116.7838 243.934)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="236.1" cy="262.9" rx="51" ry="17"/>
+		
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -188.9087 214.0589)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="163.9" cy="335.1" rx="51" ry="17"/>
+		
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -137.9087 192.934)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="163.9" cy="262.9" rx="17" ry="51"/>
+		
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -167.7838 265.0589)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="236.1" cy="335.1" rx="17" ry="51"/>
+		<ellipse fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="200" cy="248" rx="17" ry="51"/>
+		<ellipse fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="200" cy="350" rx="17" ry="51"/>
+		<ellipse fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="149" cy="299" rx="51" ry="17"/>
+		<ellipse fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="251" cy="299" rx="51" ry="17"/>
+	</g>
+</g>
+</svg>
