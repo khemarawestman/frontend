@@ -29,6 +29,7 @@ body {
 }
 #wordDisplay {
   display: flex;
+  width: 500px;
 }
 
 .letterBox {

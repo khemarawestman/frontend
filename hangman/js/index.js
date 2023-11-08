@@ -11,16 +11,20 @@ const letters = selectedWord.split("");
 console.log(letters);
 
 let wordDisplay = document.getElementById("wordDisplay");
-let blanks = "_".repeat(letters.length); 
-
+let blanks = "_".repeat(letters.length);
+function checkGameOver() {
+  if (wrongGuessCount === 5) {
+    document.querySelector("#game-over-message").style.display = "block";
+  }
+}
 function updateWordDisplay() {
-  wordDisplay.innerHTML = ""; 
+  wordDisplay.innerHTML = "";
 
   for (let i = 0; i < blanks.length; i++) {
     let letterBox = document.createElement("div");
     letterBox.classList.add("letterBox");
 
-    if (correctGuesses.some(guess => guess.position === i)) {
+    if (correctGuesses.some((guess) => guess.position === i)) {
       letterBox.textContent = letters[i];
     } else {
       letterBox.textContent = blanks[i];
@@ -32,7 +36,7 @@ function updateWordDisplay() {
 
 bodyElem.addEventListener("keyup", (event) => {
   console.log("Du klickade på: ", event.key);
-
+  checkGameOver();
   let letterGuessed = false;
 
   for (let i = 0; i < letters.length; i++) {
@@ -53,19 +57,16 @@ bodyElem.addEventListener("keyup", (event) => {
     wrongGuessCount++;
 
     if (wrongGuessCount === 1) {
-   
       document.querySelector("figure").classList.add("scaffold");
     } else if (wrongGuessCount === 2) {
-
       document.querySelector("figure").classList.add("head");
     } else if (wrongGuessCount === 3) {
-    
       document.querySelector("figure").classList.add("body");
     } else if (wrongGuessCount === 4) {
- 
       document.querySelector("figure").classList.add("arms");
     } else if (wrongGuessCount === 5) {
       document.querySelector("figure").classList.add("legs");
+      window.alert("Game Over! You've run out of guesses.");
     }
   }
 });
