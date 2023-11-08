@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flickr Search API Example</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <input type="text" id="searchTerm" placeholder="what you want to do? " />
     <button onclick="searchFlickr()">Search</button>
     <div id="results"></div>
-
+    <button id="nextPageButton" onclick="nextPage()" style="display: none">
+      Nästa sida
+    </button>
     <script src="app.js"></script>
   </body>
 </html>
