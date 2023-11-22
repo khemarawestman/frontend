@@ -81,3 +81,5 @@ function closeModal() {
   const modal = document.querySelector(".modal");
   modal.remove();
 }
+let mona = "name ";
+console.log(names);
