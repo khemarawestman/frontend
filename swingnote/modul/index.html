@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anteckningshantering</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Användarnamn" />
+        <button onclick="fetchNotes()">Hämta Anteckningar</button>
+      </div>
+
+      <div id="notes"></div>
+
+      <div class="input-group">
+        <input type="text" id="noteTitle" placeholder="Titel på anteckning" />
+        <textarea id="noteText" placeholder="Anteckningstext"></textarea>
+        <button onclick="addNote()">Skapa Anteckning</button>
+      </div>
+    </div>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
