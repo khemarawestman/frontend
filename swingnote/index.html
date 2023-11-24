@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- If you have a CSS file -->
+  </head>
+  <body>
+    <div id="noteForm">
+      <input type="text" id="username" placeholder="Username" />
+      <input type="text" id="noteTitle" placeholder="Title" />
+      <textarea id="noteText" placeholder="Note"></textarea>
+      <button onclick="addNote()">Add Note</button>
+      <button onclick="updateNote()">Update Note</button>
+      <button onclick="deleteNote()">Delete Note</button>
+    </div>
+
+    <div>
+      <input type="text" id="fetchUsername" placeholder="Username for Notes" />
+      <button onclick="fetchNotes()">Fetch Notes</button>
+    </div>
+
+    <div id="notesDisplay">
+      <!-- Fetched notes will be displayed here -->
+    </div>
+
+    <script src="app.js"></script>
+    <!-- Link to your JavaScript file -->
+  </body>
+</html>

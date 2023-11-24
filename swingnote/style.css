@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+input[type="text"],
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+div#noteForm,
+div#notesDisplay {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div#notesDisplay div {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+p {
+  margin: 0;
+  color: #666;
+}
