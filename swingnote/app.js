@@ -1,26 +1,70 @@
-async function addNote() {
-  // Implement the code snippet for adding a note
-  // Get values from input fields, etc.
+async function getNotes() {
+  const username = document.getElementById("username").value;
+  if (!username) {
+    alert("Ange ett användarnamn.");
+    return;
+  }
+
+  try {
+    let response = await fetch(
+      `https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${username}`
+    );
+    if (response.ok) {
+      let notes = await response.json();
+      displayNotes(notes);
+    } else {
+      alert("Kunde inte hämta anteckningar.");
+    }
+  } catch (error) {
+    console.error("Fel:", error);
+  }
 }
 
-async function fetchNotes() {
-  const username = document.getElementById("fetchUsername").value;
-  let response = await fetch(
-    `https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${username}`
-  );
-  let data = await response.json();
+async function createNote() {
+  const note = {
+    username: document.getElementById("username").value,
+    title: document.getElementById("newNoteTitle").value,
+    note: document.getElementById("newNoteText").value,
+  };
 
-  console.log(data);
+  if (!note.username || !note.title || !note.note) {
+    alert("Alla fält måste fyllas i.");
+    return;
+  }
+
+  try {
+    let response = await fetch(
+      "https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes",
+      {
+        method: "POST",
+        body: JSON.stringify(note),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+
+    if (response.ok) {
+      alert("Anteckningen har lagts till!");
+      getNotes(); // Uppdatera listan med anteckningar
+    } else {
+      const errorData = await response.json();
+      alert("Fel vid skapande av anteckning: " + errorData.message);
+    }
+  } catch (error) {
+    console.error("Fel:", error);
+  }
 }
 
-async function updateNote() {
-  // Implement the code snippet for updating a note
-  // You might need an input field to specify which note to update
-}
+function displayNotes(notes) {
+  const notesContainer = document.getElementById("notes");
+  notesContainer.innerHTML = ""; // Rensa befintliga anteckningar
 
-async function deleteNote() {
-  // Implement the code snippet for deleting a note
-  // You might need an input field to specify which note to delete
+  if (Array.isArray(notes)) {
+    notes.forEach((note) => {
+      let noteDiv = document.createElement("div");
+      noteDiv.innerHTML = `<h3>${note.title}</h3><p>${note.note}</p>`;
+      notesContainer.appendChild(noteDiv);
+    });
+  } else {
+    notesContainer.innerHTML = "<p>Inga anteckningar hittades.</p>";
+  }
 }
-
-// Ensure these functions are properly linked to your HTML buttons
