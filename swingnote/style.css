@@ -1,28 +1,32 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
   padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  color: #4a4a4a;
 }
 
 input[type="text"],
-textarea,
-button {
+textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-textarea {
-  height: 100px;
 }
 
 button {
   background-color: #4caf50;
   color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -30,25 +34,40 @@ button:hover {
   background-color: #45a049;
 }
 
-div#noteForm,
-div#notesDisplay {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
+#notesDisplay {
+  margin-top: 20px;
+}
+
+.note {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-div#notesDisplay div {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
+.note h3 {
+  margin-top: 0;
 }
 
-h3 {
-  margin: 0 0 10px 0;
-  color: #333;
+.note p {
+  margin: 10px 0;
 }
 
-p {
-  margin: 0;
-  color: #666;
+.note button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.note button:hover {
+  background-color: #ff5230;
 }

@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Anteckningshanterare</title>
+    <title>Note Management App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="text" id="username" placeholder="Användarnamn" />
-    <button onclick="getNotes()">Visa Anteckningar</button>
-    <div id="notes"></div>
+    <h1>NotePad</h1>
 
-    <input type="text" id="newNoteTitle" placeholder="Titel på anteckning" />
-    <textarea id="newNoteText" placeholder="Text för anteckning"></textarea>
-    <button onclick="createNote()">Skapa Anteckning</button>
+    <div>
+      <input id="username" placeholder="Username" />
+      <input id="noteTitle" placeholder="Note Title" />
+      <textarea id="noteText" placeholder="Your note..."></textarea>
+      <button onclick="createNote()">Create Note</button>
+      <button onclick="getNotes()">View My Notes</button>
+    </div>
+
+    <div>
+      <input id="noteId" placeholder="Note ID for Update/Delete" />
+      <textarea
+        id="updateNoteText"
+        placeholder="Updated note text..."
+      ></textarea>
+      <button onclick="updateNote()">Update Note</button>
+      <button onclick="deleteNote()">Delete Note</button>
+    </div>
+
+    <div id="notesDisplay"></div>
+
     <script src="app.js"></script>
   </body>
 </html>
