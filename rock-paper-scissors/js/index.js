@@ -1,18 +1,14 @@
-//Hämta användarens val
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
-//Slumpa datorns val
-
-//Avgör vinnare
-
-//Visa vinnare
-// Import the functions you need from the SDKs you need
-/*import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB9d6jM8KOZYjyq1gje0VH9vT1-Ttm_YOg",
   authDomain: "userlogin-ebfa7.firebaseapp.com",
@@ -25,8 +21,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-*/
+const db = getFirestore(app);
+
+//Hämta användarens val
+
+//Slumpa datorns val
+
+//Avgör vinnare
+
+//Visa vinnare
+
 let userWeapon; //Här sparar vi valet som användaren gör
 let computerWeapon; //Här sparar vi datorns val
 let matches = 0;
@@ -56,6 +60,7 @@ document.getElementById("paper").addEventListener("click", function () {
 });
 
 function resetGame() {
+  saveHighScore();
   matches = 0;
   stats = {
     wins: 0,
@@ -125,3 +130,40 @@ function getWinner() {
     }
   }
 }
+async function saveHighScore() {
+  const username = prompt("Enter your username to save the score:");
+  if (!username) {
+    console.log("Username is required to save the score.");
+    return;
+  }
+
+  try {
+    const docRef = await addDoc(collection(db, "highScores"), {
+      username: username,
+      wins: stats.wins,
+      loses: stats.loses,
+      draws: stats.draws,
+    });
+    console.log("High score saved with ID:", docRef.id);
+  } catch (e) {
+    console.error("Error adding high score:", e);
+  }
+}
+async function getHighScores() {
+  try {
+    const scoresRef = collection(db, "highScores");
+    const querySnapshot = await getDocs(scoresRef);
+
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      console.log(
+        `Username: ${data.username}, Wins: ${data.wins}, Losses: ${data.loses}, Draws: ${data.draws}`
+      );
+    });
+  } catch (error) {
+    console.error("Error getting high scores: ", error);
+  }
+}
+document.getElementById("showHighScores").addEventListener("click", () => {
+  getHighScores();
+});
