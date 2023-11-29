@@ -1,0 +1,93 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu li:hover {
+  background-color: #333333;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sidebar,
+.content {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.content {
+  flex: 3;
+}
+
+.team-list,
+.match-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.team-list li,
+.match-list li {
+  padding: 10px;
+  border-bottom: 1px solid #333333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-list li:last-child,
+.match-list li:last-child {
+  border-bottom: none;
+}
+
+.team-list li:hover,
+.match-list li:hover {
+  background-color: #333333;
+}
+
+.match-list .match-time {
+  min-width: 60px;
+  text-align: right;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #aaaaaa;
+}
