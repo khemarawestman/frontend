@@ -2,13 +2,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebas
 import {
   getFirestore,
   collection,
+  getDocs,
   addDoc,
   query,
-  orderBy,
-  getDocs,
+  where,
+  updateDoc,
+  increment,
+  doc,
 } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
-// Firebase Configuration
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB9d6jM8KOZYjyq1gje0VH9vT1-Ttm_YOg",
   authDomain: "userlogin-ebfa7.firebaseapp.com",
@@ -23,14 +26,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-//Hämta användarens val
-
-//Slumpa datorns val
-
-//Avgör vinnare
-
-//Visa vinnare
-
 let userWeapon; //Här sparar vi valet som användaren gör
 let computerWeapon; //Här sparar vi datorns val
 let matches = 0;
@@ -39,6 +34,8 @@ let stats = {
   loses: 0,
   draws: 0,
 };
+
+const highscoreElem = document.querySelector("#highscore");
 
 //Det gör här är att vi hämtar knappen och kör kod när användaren klickar på knappen.
 document.getElementById("rock").addEventListener("click", function () {
@@ -60,7 +57,6 @@ document.getElementById("paper").addEventListener("click", function () {
 });
 
 function resetGame() {
-  saveHighScore();
   matches = 0;
   stats = {
     wins: 0,
@@ -69,16 +65,81 @@ function resetGame() {
   };
 }
 
+function createHighscoreElement(highscore) {
+  const textElem = document.createElement("p");
+  textElem.innerText = `Användarnamn: ${highscore.username} - Vinster: ${highscore.wins} - Förluster: ${highscore.loses} - Draws: ${highscore.draws}`;
+  highscoreElem.append(textElem);
+}
+
+async function getHighscore() {
+  const highscoreList = await getDocs(collection(db, "highscore")); // Hämtar vi vår collection 'highscore'
+
+  highscoreList.forEach((highscore) => {
+    // Loopar igenom våran collection
+    const score = highscore.data();
+    //console.log(score);
+    createHighscoreElement(score);
+  });
+}
+
+getHighscore();
+
+async function checkIfUsernameExists() {
+  // Här bygger vi upp en fråga till vår databas, först bestämmer vi i vilken collection vi vill söka i collection(db, 'highscore')
+  // Sen vad vi ska söka efter och detta fall efter ett specifikt användarnamn where('username', '==', username);
+  // Till sist utför vi frågan mot databasen await getDocs(usernameQuery);
+
+  const username = document.querySelector("#username").value;
+  const usernameQuery = query(
+    collection(db, "highscore"),
+    where("username", "==", username)
+  );
+  const users = await getDocs(usernameQuery);
+
+  let foundUser;
+  users.forEach((user) => {
+    console.log(user.id);
+    console.log(user.data());
+    foundUser = user;
+  });
+
+  return foundUser;
+}
+
+async function postHighscore() {
+  stats.username = document.querySelector("#username").value;
+  //console.log(stats);
+  await addDoc(collection(db, "highscore"), stats);
+}
+
+async function updateHighscore(userId) {
+  await updateDoc(doc(db, "highscore", userId), {
+    // Anger vilket dokumentId som vi ska uppdatera
+    wins: increment(stats.wins), // Addera nuvarande vinster med det som finns i databasen
+    loses: increment(stats.loses),
+    draws: increment(stats.draws),
+  });
+}
+
 function showWinner(winner) {
   document.getElementById("winner").innerHTML = "Vinnare avgörs...";
   matches++;
-  setTimeout(() => {
+  setTimeout(async () => {
     if (matches === 3) {
       document.getElementById("winner").innerHTML = `
                 <p>Vinster: ${stats.wins}</p>
                 <p>Förluster: ${stats.loses}</p>
                 <p>Oavgjort: ${stats.draws}</p>
             `;
+      const user = await checkIfUsernameExists();
+
+      // Ifall användarnamnet redan finns så uppdatera annars skapa nytt dokument
+      if (user) {
+        // Update
+        await updateHighscore(user.id);
+      } else {
+        await postHighscore();
+      }
 
       resetGame();
     } else {
@@ -130,40 +191,3 @@ function getWinner() {
     }
   }
 }
-async function saveHighScore() {
-  const username = prompt("Enter your username to save the score:");
-  if (!username) {
-    console.log("Username is required to save the score.");
-    return;
-  }
-
-  try {
-    const docRef = await addDoc(collection(db, "highScores"), {
-      username: username,
-      wins: stats.wins,
-      loses: stats.loses,
-      draws: stats.draws,
-    });
-    console.log("High score saved with ID:", docRef.id);
-  } catch (e) {
-    console.error("Error adding high score:", e);
-  }
-}
-async function getHighScores() {
-  try {
-    const scoresRef = collection(db, "highScores");
-    const querySnapshot = await getDocs(scoresRef);
-
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      console.log(
-        `Username: ${data.username}, Wins: ${data.wins}, Losses: ${data.loses}, Draws: ${data.draws}`
-      );
-    });
-  } catch (error) {
-    console.error("Error getting high scores: ", error);
-  }
-}
-document.getElementById("showHighScores").addEventListener("click", () => {
-  getHighScores();
-});
