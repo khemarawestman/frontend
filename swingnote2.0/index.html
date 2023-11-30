@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Note Management App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>NotePad</h1>
+
+    <div>
+      <input id="username" placeholder="Username" />
+      <input id="noteTitle" placeholder="Note Title" />
+      <textarea id="noteText" placeholder="Your note..."></textarea>
+      <button id="createNoteButton">Create Note</button>
+      <button id="viewNotesButton">View My Notes</button>
+    </div>
+
+    <div>
+      <input id="noteId" placeholder="Note ID for Update/Delete" />
+      <textarea
+        id="updateNoteText"
+        placeholder="Updated note text..."
+      ></textarea>
+      <button id="updateNoteButton">Update Note</button>
+      <button id="deleteNoteButton">Delete Note</button>
+    </div>
+
+    <div id="notesDisplay"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
