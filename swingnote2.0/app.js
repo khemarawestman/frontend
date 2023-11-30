@@ -13,7 +13,6 @@ import {
 
 // Firebase configuration
 const firebaseConfig = {
-  // Your Firebase configuration
   apiKey: "AIzaSyCK_hCnXQM-UqYcPo0AC38gVLy1cnkphL8",
   authDomain: "swingnote-422da.firebaseapp.com",
   projectId: "swingnote-422da",
@@ -23,14 +22,11 @@ const firebaseConfig = {
   measurementId: "G-LSL3ENMQL4",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Reference to your Firestore database
 const db = getFirestore(app);
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Attach event listeners
   document
     .getElementById("createNoteButton")
     .addEventListener("click", createNote);
@@ -50,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Create a new note
+// CreateNote
 async function createNote() {
   const note = {
     username: document.getElementById("username").value,
@@ -71,8 +67,7 @@ async function createNote() {
     alert("An error occurred: " + error);
   }
 }
-
-// Retrieve notes for a given user
+//getnote
 async function getNotes() {
   const username = document.getElementById("username").value;
 
@@ -97,8 +92,8 @@ async function getNotes() {
   }
 }
 
-// Display notes on the page
-// Display notes on the page
+// DisplayNotes
+
 function displayNotes(notes) {
   const notesContainer = document.getElementById("notesDisplay");
   notesContainer.innerHTML = "";
@@ -117,7 +112,7 @@ function displayNotes(notes) {
   });
 }
 
-// Update an existing note
+// UpdateNote
 async function updateNote() {
   const noteId = document.getElementById("noteId").value;
   const updatedText = document.getElementById("updateNoteText").value;
@@ -137,7 +132,7 @@ async function updateNote() {
   }
 }
 
-// Delete a note
+// DeleteNote
 async function deleteNote(noteId) {
   try {
     const noteRef = doc(db, "notes", noteId);
