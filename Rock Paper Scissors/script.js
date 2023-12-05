@@ -1,4 +1,4 @@
-// Get  to DOM elements
+/* // Get  to DOM elements
 const gameContainer = document.querySelector(".container"),
   userResult = document.querySelector(".user_result img"),
   cpuResult = document.querySelector(".cpu_result img"),
@@ -64,3 +64,11 @@ optionImages.forEach((image, index) => {
     }, 2500);
   });
 });
+ */
+
+database ska lägga här
+
+function showItems{
+}
+function addToCard{}
+function checkOut{}
